@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Country Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌍 COUNTRY EXPLORER</h1>
+      <button id="toggleDarkMode">🌙 Toggle Dark Mode</button>
+    </header>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search country..." />
+      <select id="regionFilter">
+        <option value="">All Regions</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+      <button id="getcountry">Get Country</button>
+
+    </div>
+
+    <div id="loading">Loading...</div>
+   
+    <!--list of countries-->
+<div id="countries" class="country-list">
+
+  <!-- 🌍 Africa -->
+  <div class="country-card" data-region="Africa">
+    <h3>🇪🇬 Egypt</h3>
+    <p>Capital: Cairo</p>
+    <p>Population: 109M</p>
+    <p>Area: 1,001,450 km²</p>
+    <p>Language: Arabic</p>
+    <p>Currency: Egyptian Pound (EGP)</p>
+    <p>Region: Africa</p>
+    <p>Timezone: EET (UTC+2)</p>
+  </div>
+
+  <div class="country-card" data-region="Africa">
+    <h3>🇳🇬 Nigeria</h3>
+    <p>Capital: Abuja</p>
+    <p>Population: 213M</p>
+    <p>Area: 923,768 km²</p>
+    <p>Language: English</p>
+    <p>Currency: Nigerian Naira (NGN)</p>
+    <p>Region: Africa</p>
+    <p>Timezone: WAT (UTC+1)</p>
+  </div>
+
+  <div class="country-card" data-region="Africa">
+    <h3>🇿🇦 South Africa</h3>
+    <p>Capital: Pretoria</p>
+    <p>Population: 60M</p>
+    <p>Area: 1,221,037 km²</p>
+    <p>Language: Afrikaans, English, isiXhosa, isiZulu</p>
+    <p>Currency: South African Rand (ZAR)</p>
+    <p>Region: Africa</p>
+    <p>Timezone: SAST (UTC+2)</p>
+  </div>
+
+  <div class="country-card" data-region="Africa">
+    <h3>🇰🇪 Kenya</h3>
+    <p>Capital: Nairobi</p>
+    <p>Population: 54M</p>
+    <p>Area: 580,367 km²</p>
+    <p>Language: Swahili, English</p>
+    <p>Currency: Kenyan Shilling (KES)</p>
+    <p>Region: Africa</p>
+    <p>Timezone: EAT (UTC+3)</p>
+  </div>
+
+  <div class="country-card" data-region="Africa">
+    <h3>🇪🇹 Ethiopia</h3>
+    <p>Capital: Addis Ababa</p>
+    <p>Population: 120M</p>
+    <p>Area: 1,104,300 km²</p>
+    <p>Language: Amharic</p>
+    <p>Currency: Ethiopian Birr (ETB)</p>
+    <p>Region: Africa</p>
+    <p>Timezone: EAT (UTC+3)</p>
+  </div>
+
+  <!-- 🌎 American -->
+  <div class="country-card" data-region="America">
+    <h3>🇺🇸 United States</h3>
+    <p>Capital: Washington, D.C.</p>
+    <p>Population: 332M</p>
+    <p>Area: 9,525,067 km²</p>
+    <p>Language: English</p>
+    <p>Currency: United States Dollar (USD)</p>
+    <p>Region: Americas</p>
+    <p>Timezone: EST (UTC-5)</p>
+  </div>
+
+  <div class="country-card" data-region="America">
+    <h3>🇧🇷 Brazil</h3>
+    <p>Capital: Brasília</p>
+    <p>Population: 214M</p>
+    <p>Area: 8,515,767 km²</p>
+    <p>Language: Portuguese</p>
+    <p>Currency: Brazilian Real (BRL)</p>
+    <p>Region: Americas</p>
+    <p>Timezone: BRT (UTC-3)</p>
+  </div>
+
+  <div class="country-card" data-region="America">
+    <h3>🇨🇦 Canada</h3>
+    <p>Capital: Ottawa</p>
+    <p>Population: 38M</p>
+    <p>Area: 9,984,670 km²</p>
+    <p>Language: English, French</p>
+    <p>Currency: Canadian Dollar (CAD)</p>
+    <p>Region: Americas</p>
+    <p>Timezone: EST (UTC-5)</p>
+  </div>
+
+  <div class="country-card" data-region="America">
+    <h3>🇲🇽 Mexico</h3>
+    <p>Capital: Mexico City</p>
+    <p>Population: 126M</p>
+    <p>Area: 1,964,375 km²</p>
+    <p>Language: Spanish</p>
+    <p>Currency: Mexican Peso (MXN)</p>
+    <p>Region: Americas</p>
+    <p>Timezone: CST (UTC-6)</p>
+  </div>
+
+  <div class="country-card" data-region="America">
+    <h3>🇦🇷 Argentina</h3>
+    <p>Capital: Buenos Aires</p>
+    <p>Population: 46M</p>
+    <p>Area: 2,780,400 km²</p>
+    <p>Language: Spanish</p>
+    <p>Currency: Argentine Peso (ARS)</p>
+    <p>Region: Americas</p>
+    <p>Timezone: ART (UTC-3)</p>
+  </div>
+
+  <!-- 🌏 Asia -->
+  <div class="country-card" data-region="Asia">
+    <h3>🇨🇳 China</h3>
+    <p>Capital: Beijing</p>
+    <p>Population: 1.4B</p>
+    <p>Area: 9,596,961 km²</p>
+    <p>Language: Mandarin</p>
+    <p>Currency: Renminbi (CNY)</p>
+    <p>Region: Asia</p>
+    <p>Timezone: CST (UTC+8)</p>
+  </div>
+
+  <div class="country-card" data-region="Asia">
+    <h3>🇮🇳 India</h3>
+    <p>Capital: New Delhi</p>
+    <p>Population: 1.4B</p>
+    <p>Area: 3,287,263 km²</p>
+    <p>Language: Hindi, English</p>
+    <p>Currency: Indian Rupee (INR)</p>
+    <p>Region: Asia</p>
+    <p>Timezone: IST (UTC+5:30)</p>
+  </div>
+
+  <div class="country-card" data-region="Asia">
+    <h3>🇯🇵 Japan</h3>
+    <p>Capital: Tokyo</p>
+    <p>Population: 125M</p>
+    <p>Area: 377,975 km²</p>
+    <p>Language: Japanese</p>
+    <p>Currency: Japanese Yen (JPY)</p>
+    <p>Region: Asia</p>
+    <p>Timezone: JST (UTC+9)</p>
+  </div>
+
+  <div class="country-card" data-region="Asia">
+    <h3>🇸🇦 Saudi Arabia</h3>
+    <p>Capital: Riyadh</p>
+    <p>Population: 35M</p>
+    <p>Area: 2,149,690 km²</p>
+    <p>Language: Arabic</p>
+    <p>Currency: Saudi Riyal (SAR)</p>
+    <p>Region: Asia</p>
+    <p>Timezone: AST (UTC+3)</p>
+  </div>
+
+  <div class="country-card" data-region="Asia">
+    <h3>🇮🇩 Indonesia</h3>
+    <p>Capital: Jakarta</p>
+    <p>Population: 273M</p>
+    <p>Area: 1,904,569 km²</p>
+    <p>Language: Indonesian</p>
+    <p>Currency: Indonesian Rupiah (IDR)</p>
+    <p>Region: Asia</p>
+    <p>Timezone: WIB (UTC+7)</p>
+  </div>
+
+  <!-- 🌍 Europe -->
+  <div class="country-card" data-region="Europe">
+    <h3>🇩🇪 Germany</h3>
+    <p>Capital: Berlin</p>
+    <p>Population: 83M</p>
+    <p>Area: 357,022 km²</p>
+    <p>Language: German</p>
+    <p>Currency: Euro (EUR)</p>
+    <p>Region: Europe</p>
+    <p>Timezone: CET (UTC+1)</p>
+  </div>
+
+  <div class="country-card" data-region="Europe">
+    <h3>🇫🇷 France</h3>
+    <p>Capital: Paris</p>
+    <p>Population: 67M</p>
+    <p>Area: 551,695 km²</p>
+    <p>Language: French</p>
+    <p>Currency: Euro (EUR)</p>
+    <p>Region: Europe</p>
+    <p>Timezone: CET (UTC+1)</p>
+  </div>
+
+  <div class="country-card" data-region="Europe">
+    <h3>🇬🇧 United Kingdom</h3>
+    <p>Capital: London</p>
+    <p>Population: 68M</p>
+  </div>
+  <div class="country-card" data-region="Europe">
+    <h3>🇮🇹 Italy</h3>
+    <p>Capital: Rome</p>
+    <p>Population: 60M</p>
+  </div>
+  <div class="country-card" data-region="Europe">
+    <h3>🇪🇸 Spain</h3>
+    <p>Capital: Madrid</p>
+    <p>Population: 47M</p>
+  </div>
+
+  <!-- 🌴 Oceania -->
+  <div class="country-card" data-region="Oceania">
+    <h3>🇦🇺 Australia</h3>
+    <p>Capital: Canberra</p>
+    <p>Population: 25M</p>
+    <p>Area: 7,692,024 km²</p>
+    <p>Language: English</p>
+    <p>Currency: Australian Dollar (AUD)</p>
+    <p>Region: Oceania</p>
+    <p>Timezone: AEDT (UTC+11)</p>
+  </div>
+
+  <div class="country-card" data-region="Oceania">
+    <h3>🇳🇿 New Zealand</h3>
+    <p>Capital: Wellington</p>
+    <p>Population: 5M</p>
+    <p>Area: 268,021 km²</p>
+    <p>Language: English, Māori</p>
+    <p>Currency: New Zealand Dollar (NZD)</p>
+    <p>Region: Oceania</p>
+    <p>Timezone: NZST (UTC+12)</p>
+  </div>
+
+  <div class="country-card" data-region="Oceania">
+    <h3>🇫🇯 Fiji</h3>
+    <p>Capital: Suva</p>
+    <p>Population: 900K</p>
+    <p>Area: 18,274 km²</p>
+    <p>Language: Fijian, Hindi, English</p>
+    <p>Currency: Fijian Dollar (FJD)</p>
+    <p>Region: Oceania</p>
+    <p>Timezone: FJT (UTC+12)</p>
+  </div>
+
+  <div class="country-card" data-region="Oceania">
+    <h3>🇵🇬 Papua New Guinea</h3>
+    <p>Capital: Port Moresby</p>
+    <p>Population: 9M</p>
+    <p>Area: 462,840 km²</p>
+    <p>Language: Tok Pisin, Hiri Motu, English</p>
+    <p>Currency: Papua New Guinean Kina (PGK)</p>
+    <p>Region: Oceania</p>
+    <p>Timezone: AEST (UTC+10)</p>
+  </div>
+
+  <div class="country-card" data-region="Oceania">
+    <h3>🇸🇧 Solomon Islands</h3>
+    <p>Capital: Honiara</p>
+    <p>Population: 700K</p>
+    <p>Area: 28,896 km²</p>
+    <p>Language: English</p>
+    <p>Currency: Solomon Islands Dollar (AUD)</p>
+    <p>Region: Oceania</p>
+    <p>Timezone: SBT (UTC+11)</p>
+  </div>
+
+</div>
+
+    <div id="details" class="country-details"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
